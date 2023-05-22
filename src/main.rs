@@ -1,19 +1,16 @@
 //name:gaopenghao
 
 fn main() {
-    let mut s = String::from("hello");
-    let a = &s;
-    println!("{}", s);
-    println!("{}", a);
-    println!("{:p}", a);
-
-    change(&mut s);//可变引用
-    println!("{}", s);
+    let s1 = String::from("hello");
+    let s2 = String::from("world!");
+    // 在下句中，s1的所有权被转移走了，因此后面不能再使用s1
+    let s3 = s1 + &s2;
+    assert_eq!(s3,"hello,world!");
+    // 下面的语句如果去掉注释，就会报错
+    // println!("{}",s1);
 }
 
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
-    println!("{}", some_string);
-}
+
+
 
 
