@@ -1,14 +1,14 @@
 //name:gaopenghao
 
 
-fn main(){
-    let b = "hello".to_string();
-    a(b);
-    println!("{}",b);
+
+#![allow(unused)]
+
+use std::string;
+fn main() {
+    let s:i32;
 }
-fn a(q: String) {
-    println!("{}", q);
-}
+
 
 
 
